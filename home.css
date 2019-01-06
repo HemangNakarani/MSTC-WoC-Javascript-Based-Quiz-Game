@@ -1,0 +1,43 @@
+.m1{
+	font-size: 47px;
+	color: #00FFFF;
+	font-family: Microsoft JhengHei UI;
+	border-bottom: 3px solid #FFB6C1;
+}
+
+.m1:hover{
+	color: #FFB6C1;
+	border-bottom: 3px solid #00FFFF;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color:#DCDCDC;
+  border-radius: 20px;
+  width: 300px;
+  height: 150px;
+  margin: 60px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.flex1{
+	 background-color:#DCDCDC;
+	 justify-content: center;
+	 font-family: Segoe UI Black;
+		color: black;
+}
+
+.flex1:hover{
+	 background-color:#F08080 ;
+	 font-family: Segoe UI Black;
+		color: white;
+}
+	
+

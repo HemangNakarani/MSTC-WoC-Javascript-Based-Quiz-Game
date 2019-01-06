@@ -1,0 +1,112 @@
+<html>
+<head>
+  <link rel="icon" type="image/icon" href="trophy.jpg">
+  <title>Leaderboard</title>
+	<style type="text/css">
+		table, th, td {
+  border: 5px solid black;
+  border-collapse: collapse;
+}
+.tr{
+	background-color: #3cb371;
+}
+.tr2{
+	background-color:#ffa500;
+}
+.head{
+	font-family: Trebuchet MS;
+	color: white;
+	font-size: 50px;
+}
+.score{
+	font-family: Microsoft JhengHei;
+	font-size: 50px;
+}
+	</style>
+	</head>
+	<body bgcolor="DodgerBlue">
+		<div align="center" style="background-color: #ff0000; padding: 30px; margin: 30px; border: 10px solid black; border-radius: 40px"><h1 style="color: white; font-family: Franklin Gothic Medium; font-size: 50px;">LEADERBOARD</h1></div>
+		<div style="padding: 10px" ></div>
+		<div align="center">
+			<table width="100%" style="position: relative; text-align: center;"><tr class="tr"><td><h1 class="head">NAME</h1></td><td><h1 class="head">SCORE</h1></td><td><h1 class="head">TIME</h1></td></tr>
+<tr class="tr2"><td><h1 id="demo" class="score"></h1></td><td><h1 id="demo1" class="score"></h1></td><td><h1 id="demo2" class="score"></h1></td></tr>
+				</table>
+</div>
+
+
+ <script>
+
+var order, text,tex,te, fLen, i,orde,ord,k,j,temp,tem,te;
+order =localStorage.getItem('array');
+orde=localStorage.getItem('array2');
+ord=localStorage.getItem('time');
+var res = order.split(",");
+var re = orde.split(",");
+var r = ord.split(",");
+
+fLen = res.length;
+
+for ( k = 0; k < fLen; k++) {
+    // loop through the array, moving forwards:
+    // note in loop below we set `j = i` so we move on after finding greatest value:
+    for (j = k; j < fLen; j++) {
+      if (re[k] < re[j]) {
+        tem = re[k];
+        temp=res[k];
+        te = r[k];
+         // store original value for swapping
+        re[k] = re[j]; 
+        res[k]=res[j];
+        r[k]=r[j];
+        // set original value position to greater value
+        re[j] = tem;
+        res[j]=temp;
+        r[j]=te; // set greater value position to original value
+      }
+      else if(re[k]==re[j])
+      {
+      	if(r[k]<r[j])
+      	{
+      		tem = re[k];
+        temp=res[k];
+        te = r[k];
+         // store original value for swapping
+        re[k] = re[j]; 
+        res[k]=res[j];
+        r[k]=r[j];
+        // set original value position to greater value
+        re[j] = tem;
+        res[j]=temp;
+        r[j]=te; // set greater value position to original value
+      	};
+      };
+    };
+  };
+
+
+text = "<ol>";
+for (i = 0; i < fLen; i++) {
+  text +=  "<li>" + res[i] + "</li>";
+}
+text += "</ol>";
+
+tex = "<ul>";
+for (i = 0; i < fLen; i++) {
+  tex += "<li>" +re[i] + "</li>";
+}
+tex += "</ul>";
+
+te = "<ul>";
+for (i = 0; i < fLen; i++) {
+  te += "<li>" +r[i] + "</li>";
+}
+te += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+document.getElementById("demo1").innerHTML = tex;
+document.getElementById("demo2").innerHTML = te;
+
+
+</script>
+	</body>
+</html>

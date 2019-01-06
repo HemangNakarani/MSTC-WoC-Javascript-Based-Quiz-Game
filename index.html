@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>GO</title>
+  <link rel="icon" type="image/icon" href="goicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="leaderboard.js"></script>
+	<style>
+.button {
+  display: inline-block;
+  border-radius: 500px;
+  background-color: #f4511e;
+  border: none;
+  opacity: 0.8;
+  color: white;
+  font-family: Trebuchet MS;
+  text-align: center;
+  font-size: 100px;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button:hover{
+	opacity: 1;
+	 box-shadow: 0 12px 16px 0 rgba(0,0,0,1),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -45px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 73px;
+  border: 2px solid black;
+  border-radius: 500px;
+  width: 200px;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.25),0 17px 50px 0 rgba(0,0,0,0.30);
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 10;
+}
+
+body{
+  padding: 25px;
+  background: url(back.jpg);
+  background-position: center;
+   position: relative;
+   background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+</style>
+	</head>
+	<body background="back.jpg">
+		<div align="center" style="margin: 80px;" class="w3-container w3-red"><a href="Home.html"><button class="button" style="vertical-align:middle" onclick="add()"><span>GO </span></button></a></div>
+
+		<div align="center"><h1 style="font-family:Trebuchet MS; color: white;">CREATED BY: HEMANG NAKARANI</h1></div>
+	</body>
+</html>

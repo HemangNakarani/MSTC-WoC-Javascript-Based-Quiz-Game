@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Incredible India</title>
+  <link rel="icon" type="image/icon" href="scoreicon.png">
+	<link rel="stylesheet" href="startindia.css">
+	<script type="text/javascript" src="india.js"></script>
+	<script type="text/javascript" src="leaderboard.js"></script>
+    <style>
+    body{
+ 
+  padding: 25px;
+  background: url(submitindia.gif);
+  background-position: center;
+   position: relative;
+   background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>
+</head>
+<body background="submitindia.gif">
+<div align="center"><h1 class="m1"><p id="name">Hello !!!</p></h1></div>
+<div align="center">
+	<button onclick="onc()" class="button1">Get Your Result</button></div>
+<div align="center"><input type="text1" id="result2" readonly></div>
+</div>
+<div align="center" style="padding: 50px"><a href="Home.html"><button class="button2">Play Again ></button></a></div>
+<div align="center"><a href="leaderboard.html"><button class="button2" onclick="orde()">Leaderboard</button></a></div>
+
+<script>
+(function (global) { 
+
+    if(typeof (global) === "undefined") {
+        throw new Error("window is undefined");
+    }
+
+    var _hash = "!";
+    var noBackPlease = function () {
+        global.location.href += "#";
+
+        // making sure we have the fruit available for juice (^__^)
+        global.setTimeout(function () {
+            global.location.href += "!";
+        }, 50);
+    };
+
+    global.onhashchange = function () {
+        if (global.location.hash !== _hash) {
+            global.location.hash = _hash;
+        }
+    };
+
+    global.onload = function () {            
+        noBackPlease();
+
+        // disables backspace on page except on input fields and textarea..
+        document.body.onkeydown = function (e) {
+            var elm = e.target.nodeName.toLowerCase();
+            if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
+                e.preventDefault();
+            }
+            // stopping event bubbling up the DOM tree..
+            e.stopPropagation();
+        };          
+    }
+
+})(window);
+	
+	</script>
+
+	</body>
+	</html>
