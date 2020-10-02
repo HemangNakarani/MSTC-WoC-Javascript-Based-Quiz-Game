@@ -1,92 +1,117 @@
 <html>
-<head>
-	<title>Home</title>
-  <link rel="icon" type="image/icon" href="homeicon.png">
-	<link rel="stylesheet" href="home.css">
+  <head>
+    <title>Home</title>
+    <link rel="icon" type="image/icon" href="homeicon.png" />
+    <link rel="stylesheet" href="home.css" />
 
-	<style>
-a:link {
-  color: black;
-  text-decoration: none;
-  
-}
-a:visited {
-  color: black;
-  text-decoration: none;
-}
-a:hover {
-  color: white;
-  text-decoration: none;
-}
-a:active {
-  color: black;
-  text-decoration: none;
-}
-body{
-  padding: 25px;
-  background: url(home.gif);
-  background-position: center;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-</style>
-</head>
-<body background="home.gif">
-	<div align="center">
-<h1 class="m1" style="position: relative;">Welcome To Quiz</h1>
-<h4 style="color: #F08080; font-family: Segoe UI Black; padding: 0px 90px; position: relative; ">Move Towards Knowledge</h4>
-		</div>
-		<div align="center">
-		<h4 style="color:#00FF7F; font-family: Courier New; padding: 0px 55px; font-size: 20px; position: relative;">Select whichever you Want to play</h4>
-</div>
-  <div class="flex-container">
-  <div class="flex1"><a href="startindia.html"><h3 class="flexfont">Incredible India</h3></a></div>
-  <div class="flex1"><a href="startsci.html"><h3 class="flexfont">Science</h3></a></div>
-  <div class="flex1"><a href="startmovies.html"><h3 class="flexfont">Movies</h3></a></div>  
-  <div class="flex1"><a href="startmaths.html"><h3 class="flexfont">Maths</h3></a></div>
-  <div class="flex1"><a href="startcricket.html"><h3 class="flexfont">Cricket</h3></a></div>  
-</div>
+    <style>
+      a:link {
+        color: black;
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+        text-decoration: none;
+      }
+      a:active {
+        color: black;
+        text-decoration: none;
+      }
+      body {
+        padding: 25px;
+        background: url(home.gif);
+        background-position: center;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body background="home.gif">
+    <div align="center">
+      <h1 class="m1" style="position: relative">Welcome To Quiz</h1>
+      <h4
+        style="
+          color: #f08080;
+          font-family: Segoe UI Black;
+          padding: 0px 90px;
+          position: relative;
+        "
+      >
+        Move Towards Knowledge
+      </h4>
+    </div>
+    <div align="center">
+      <h4
+        style="
+          color: #00ff7f;
+          font-family: Courier New;
+          padding: 0px 55px;
+          font-size: 20px;
+          position: relative;
+        "
+      >
+        Select whichever you Want to play
+      </h4>
+    </div>
+    <div class="flex-container">
+      <div class="flex1">
+        <a href="startindia.html"><h3 class="flexfont">Incredible India</h3></a>
+      </div>
+      <div class="flex1">
+        <a href="startsci.html"><h3 class="flexfont">Science</h3></a>
+      </div>
+      <div class="flex1">
+        <a href="startmovies.html"><h3 class="flexfont">Movies</h3></a>
+      </div>
+      <div class="flex1">
+        <a href="startmaths.html"><h3 class="flexfont">Maths</h3></a>
+      </div>
+      <div class="flex1">
+        <a href="startcricket.html"><h3 class="flexfont">Cricket</h3></a>
+      </div>
+    </div>
 
-<script>
-(function (global) { 
-
-    if(typeof (global) === "undefined") {
-        throw new Error("window is undefined");
-    }
-
-    var _hash = "!";
-    var noBackPlease = function () {
-        global.location.href += "#";
-
-        // making sure we have the fruit available for juice (^__^)
-        global.setTimeout(function () {
-            global.location.href += "!";
-        }, 50);
-    };
-
-    global.onhashchange = function () {
-        if (global.location.hash !== _hash) {
-            global.location.hash = _hash;
+    <script>
+      (function (global) {
+        if (typeof global === "undefined") {
+          throw new Error("window is undefined");
         }
-    };
 
-    global.onload = function () {            
-        noBackPlease();
+        var _hash = "!";
+        var noBackPlease = function () {
+          global.location.href += "#";
 
-        // disables backspace on page except on input fields and textarea..
-        document.body.onkeydown = function (e) {
+          // making sure we have the fruit available for juice (^__^)
+          global.setTimeout(function () {
+            global.location.href += "!";
+          }, 50);
+        };
+
+        global.onhashchange = function () {
+          if (global.location.hash !== _hash) {
+            global.location.hash = _hash;
+          }
+        };
+
+        global.onload = function () {
+          noBackPlease();
+
+          // disables backspace on page except on input fields and textarea..
+          document.body.onkeydown = function (e) {
             var elm = e.target.nodeName.toLowerCase();
-            if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
-                e.preventDefault();
+            if (e.which === 8 && elm !== "input" && elm !== "textarea") {
+              e.preventDefault();
             }
             // stopping event bubbling up the DOM tree..
             e.stopPropagation();
-        };          
-    }
-
-})(window);
-  
-  </script>
-</body>
+          };
+        };
+      })(window);
+    </script>
+  </body>
 </html>
